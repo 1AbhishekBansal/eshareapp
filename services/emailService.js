@@ -4,8 +4,8 @@ async function sendMail({ from, to, subject, text, html }) {
   let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'bindassabhi.bansal@gmail.com',
-      pass: 'J;kee10s25b'
+      user: process.env.MAIL_USER,
+      pass: process.env.MAIL_PASSWORD
     }
     // host: process.env.SMTP_HOST,
     // port: process.env.SMTP_PORT,
